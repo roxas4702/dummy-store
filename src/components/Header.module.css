@@ -16,11 +16,8 @@
 
 .cartButton {
     font-size: 16px;
-    cursor: pointer;
-    outline: none;
-    border: none;
     padding: 5px 15px;
-    border-radius: 8px;
+    border-radius: 6px;
     background-color: green;
     color: #fff;
 }

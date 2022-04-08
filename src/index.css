@@ -4,6 +4,12 @@ body {
     font-family: 'Roboto Slab', serif;
 }
 
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
 .productsContainer {
     display: flex;
     justify-content: center;

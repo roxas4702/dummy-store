@@ -12,19 +12,21 @@
 
 .productImage {
     margin: 15px auto;
-    width: 130px;
     height: 130px;
+    width: 130px;
+}
+
+.productTitle {
+    font-weight: 700;
 }
 
 .productButton {
-    cursor: pointer;
-    outline: none;
-    border: solid green 2px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 5px 20%;
     padding: 5px;
-    font-weight: 500;
-    background-color: #fff;
+    color: #fff;
+    background-color: green;
+    font-weight: 700;
 }
 
 .productButton:hover {

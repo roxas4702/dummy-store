@@ -1,7 +1,15 @@
+.cartContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
 .product {
     display: flex;
     width: 60%;
-    margin: 1% auto;
+    margin: 1%;
     padding: 15px;
     border: solid #000 1px;
     border-radius: 6px;
@@ -29,20 +37,46 @@
     display: flex;
 }
 
-.buttonsWrapper button {
-    cursor: pointer;
-    outline: none;
-    border: none;
+.cartContainer button {
     border-radius: 6px;
-    margin: 0 5px;
-    padding: 5px 10px;
-    color: #fff;
+    color: #000;
+    background-color: #fff;
+    font-size: 20px;
 }
 
-.buttonAdd {
-    background-color: green;
+.buttonsWrapper button {
+    margin-right: 15px;
+    height: 30px;
+    width: 30px;
 }
 
 .buttonRemove {
+    border: solid red 2px;
+}
+
+.buttonAdd {
+    border: solid green 2px;
+}
+
+.buttonRemove:hover,
+.clearCart:hover {
     background-color: red;
+    color: #fff;
+}
+
+.buttonAdd:hover {
+    background-color: green;
+    color: #fff;
+}
+
+.clearCart {
+    border: solid red 2px;
+    font-weight: 700;
+    padding: 5px 10px;
+}
+
+.goBack {
+    cursor: pointer;
+    text-decoration: underline;
+    color: purple;
 }
