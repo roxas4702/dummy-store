@@ -1,0 +1,33 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 1% 3%;
+    padding: 0 10px;
+    border: solid #000 1px;
+    border-radius: 6px;
+    font-size: 14px;
+    box-shadow: 10px 10px 20px -15px #000;
+}
+
+.productImage {
+    margin: 15px auto;
+    width: 130px;
+    height: 130px;
+}
+
+.productButton {
+    cursor: pointer;
+    outline: none;
+    border: solid green 2px;
+    border-radius: 10px;
+    margin: 5px 20%;
+    padding: 5px;
+    font-weight: 500;
+    background-color: #fff;
+}
+
+.productButton:hover {
+    color: #fff;
+    background-color: green;
+}

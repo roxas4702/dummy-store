@@ -1,0 +1,48 @@
+.product {
+    display: flex;
+    width: 60%;
+    margin: 1% auto;
+    padding: 15px;
+    border: solid #000 1px;
+    border-radius: 6px;
+    font-size: 18px;
+    box-shadow: 10px 10px 20px -15px #000;
+}
+
+.productImage {
+    width: 130px;
+    height: 130px;
+}
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 30px;
+}
+
+.productTitle {
+    font-weight: 700;
+}
+
+.buttonsWrapper {
+    display: flex;
+}
+
+.buttonsWrapper button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    margin: 0 5px;
+    padding: 5px 10px;
+    color: #fff;
+}
+
+.buttonAdd {
+    background-color: green;
+}
+
+.buttonRemove {
+    background-color: red;
+}
