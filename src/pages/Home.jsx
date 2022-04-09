@@ -8,7 +8,7 @@ const Home = () => {
     const [filteredData, setFilteredData] = useState([]);
 
     useEffect(() => {
-        getProducts()
+        getProducts();
     }, [])
 
     const filterProducts = (category) => {
@@ -21,11 +21,12 @@ const Home = () => {
         const check = localStorage.getItem("products");
         if (check) {
             setProducts(JSON.parse(check));
-            setFilteredData(JSON.parse(check))
+            setFilteredData(JSON.parse(check));
         } else {
             const res = await axios.get('https://fakestoreapi.com/products');
             localStorage.setItem("products", JSON.stringify(res.data));
             setProducts(res.data);
+            setFilteredData(res.data);
         }
     }
 
