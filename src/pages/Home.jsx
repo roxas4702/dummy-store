@@ -4,10 +4,17 @@ import Product from "../components/Product";
 
 const Home = () => {
     const [products, setProducts] = useState([]);
+    const [filteredData, setFilteredData] = useState([]);
 
     useEffect(() => {
         getProducts();
     }, [])
+
+    const filterProducts = (category) => {
+        setProducts(products.filter((p) => p.category === category));
+        console.log(products)
+    }
+
 
     const getProducts = async () => {
         const check = localStorage.getItem("products");
@@ -23,6 +30,11 @@ const Home = () => {
 
     return (
         <div className="productsContainer">
+            <button onClick={() => filterProducts("men's clothing")}>men's clothing</button>
+            <button onClick={() => filterProducts("women's clothing")}>women's clothing</button>
+            <button onClick={() => filterProducts("jewelery")}>jewelery</button>
+            <button onClick={() => filterProducts("electronics")}>electronics</button>
+
             {products.map((product) => <Product product={product} key={product.id} />)}
         </div>
     );
