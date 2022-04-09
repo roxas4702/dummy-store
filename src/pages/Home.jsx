@@ -1,3 +1,4 @@
+import styles from "./Home.module.css"
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Product from "../components/Product";
@@ -29,13 +30,17 @@ const Home = () => {
     }
 
     return (
-        <div className="productsContainer">
-            <button onClick={() => filterProducts("men's clothing")}>men's clothing</button>
-            <button onClick={() => filterProducts("women's clothing")}>women's clothing</button>
-            <button onClick={() => filterProducts("jewelery")}>jewelery</button>
-            <button onClick={() => filterProducts("electronics")}>electronics</button>
-
-            {filteredData.map((product) => <Product product={product} key={product.id} />)}
+        <div>
+            <div className={styles.buttonsContainer}>
+                <button onClick={getProducts}>All</button>
+                <button onClick={() => filterProducts("men's clothing")}>Men's clothing</button>
+                <button onClick={() => filterProducts("women's clothing")}>Women's clothing</button>
+                <button onClick={() => filterProducts("jewelery")}>Jewelery</button>
+                <button onClick={() => filterProducts("electronics")}>Electronics</button>
+            </div>
+            <div className={styles.productsContainer}>
+                {filteredData.map((product) => <Product product={product} key={product.id} />)}
+            </div>
         </div>
     );
 }

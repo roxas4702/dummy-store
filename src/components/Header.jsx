@@ -2,7 +2,9 @@ import styles from "./Header.module.css"
 import { useHistory } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
-import { FiShoppingCart } from 'react-icons/fi';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Header = () => {
 	const history = useHistory();
@@ -11,8 +13,12 @@ const Header = () => {
     return (
         <div className={styles.header}>
             <h2 onClick={() => history.push('/')}>Dummy Store</h2>
-            <span>links</span>
-            <button className={styles.cartButton} onClick={() => history.push('/cart')}><FiShoppingCart /> Cart ({cartCount})</button>           
+            <div className={styles.contacts}>
+                <a href="https://github.com/roxas4702" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /> Github</a>
+                <a href="https://talent.start2impact.it/profile/luca-curro" target="_blank" rel="noreferrer">🚀 Start2Impact</a>
+                <a href="https://lucacurro.netlify.app/" target="_blank" rel="noreferrer">🌐 My Website</a>
+            </div>
+            <button className={styles.cartButton} onClick={() => history.push('/cart')}><FontAwesomeIcon icon={faCartShopping} /> Cart ({cartCount})</button>           
         </div>
     );
 }
