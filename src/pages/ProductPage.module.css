@@ -4,7 +4,7 @@
 }
 
 .productImage {
-    width: 300px;
+    width: clamp(160px, 18vw, 300px);
     height: auto;
 }
 
@@ -13,13 +13,18 @@
     flex-direction: column;
     max-width: 500px;
     margin-left: 60px;
-    font-size: 16px;
+    font-size: clamp(12px, 2vw, 16px);
 }
 
 .productTitle {
     font-weight: 700;
-    font-size: 20px;
+    font-size: clamp(15px, 3vw, 20px);
     margin-bottom: 15px;
+}
+
+.productPrice {
+    font-weight: 700;
+    font-size: clamp(15px, 3vw, 20px);
 }
 
 .buttonsWrapper {
@@ -31,10 +36,21 @@
     margin: 10px 10px 0 0;
     border-radius: 5px;
     background-color: #fff;
-    font-size: 16px;
+    font-size: clamp(12px, 2vw, 16px);
 }
 
 .buttonsWrapper button:hover {
     color: #fff;
     background-color: #292929;
+}
+
+@media only screen and (max-width: 580px){
+    .product {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productInfo {
+        margin: 20px
+    }
 }

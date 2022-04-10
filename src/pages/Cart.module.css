@@ -8,12 +8,12 @@
 
 .product {
     display: flex;
-    width: 60%;
-    margin: 1%;
+    width: 50%;
+    margin: 15px 0;
     padding: 15px;
     border: solid #000 1px;
     border-radius: 6px;
-    font-size: 18px;
+    font-size: clamp(13px, 3vw, 18px);
     box-shadow: 10px 10px 20px -15px #000;
 }
 
@@ -73,4 +73,16 @@
 
 .goBack:hover {
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 580px){
+    .product {
+        width: 85%;
+        margin: 10px 0;
+    }
+
+    .productImage {
+        width: 100px;
+        height: 100px;
+    }
 }

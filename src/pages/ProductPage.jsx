@@ -21,8 +21,8 @@ const ProductPage = ({ location }) => {
             <img className={styles.productImage} src={state.product.image} alt="" />
             <div className={styles.productInfo}>
                 <span className={styles.productTitle}>{state.product.title}</span>
-                <span className={styles.productDescription}>{state.product.description}</span>
-                <span>{`$${state.product.price}`}</span>
+                <span>{state.product.description}</span>
+                <span className={styles.productPrice}>{`$${state.product.price}`}</span>
                 <div className={styles.buttonsWrapper}>
                     <button onClick={() => addItem(state.product)}>Add to cart</button>
                     <Link to='/'><button>Go back</button></Link>       
