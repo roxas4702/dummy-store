@@ -1,12 +1,11 @@
 import styles from "./Cart.module.css"
 import { useContext, useEffect } from "react";
-import { useHistory } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import { useCart } from "react-use-cart";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
     const { setCartCount } = useContext(CartContext);
-	const history = useHistory();
 
     const {
         isEmpty,
@@ -26,7 +25,7 @@ const Cart = () => {
         return (
             <div className={styles.cartContainer}>
                 <h1>Your cart is empty!</h1>
-                <span className={styles.goBack} onClick={() => history.push('/')}>Go Back</span>
+                <Link className={styles.goBack} to='/'>Go Back</Link>
             </div>
         )
     }

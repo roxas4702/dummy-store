@@ -7,9 +7,14 @@ body {
 button {
     cursor: pointer;
     outline: none;
-    border: none;
+    border: #000 solid 2px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 .content {
-    padding-top: 60px;
+    padding-top: 70px;
 }

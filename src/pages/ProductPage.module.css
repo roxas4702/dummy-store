@@ -1,0 +1,40 @@
+.product {
+    display: flex;
+    margin: 5%;
+}
+
+.productImage {
+    width: 300px;
+    height: auto;
+}
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin-left: 60px;
+    font-size: 16px;
+}
+
+.productTitle {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.buttonsWrapper {
+    display: flex;
+}
+
+.buttonsWrapper button {
+    padding: 10px 15px;
+    margin: 10px 10px 0 0;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+.buttonsWrapper button:hover {
+    color: #fff;
+    background-color: #292929;
+}

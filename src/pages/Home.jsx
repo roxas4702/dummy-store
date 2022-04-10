@@ -16,7 +16,6 @@ const Home = () => {
         setFilteredData(updatedList);
     }
 
-
     const getProducts = async () => {
         const check = localStorage.getItem("products");
         if (check) {
@@ -32,7 +31,7 @@ const Home = () => {
 
     return (
         <div>
-            <div className={styles.buttonsContainer}>
+            <div className={styles.categoryButtons}>
                 <button onClick={getProducts}>All</button>
                 <button onClick={() => filterProducts("men's clothing")}>Men's clothing</button>
                 <button onClick={() => filterProducts("women's clothing")}>Women's clothing</button>
@@ -41,6 +40,10 @@ const Home = () => {
             </div>
             <div className={styles.productsContainer}>
                 {filteredData.map((product) => <Product product={product} key={product.id} />)}
+                <div className={styles.fillEmptySpaces}></div>
+                <div className={styles.fillEmptySpaces}></div>
+                <div className={styles.fillEmptySpaces}></div>
+                <div className={styles.fillEmptySpaces}></div>
             </div>
         </div>
     );

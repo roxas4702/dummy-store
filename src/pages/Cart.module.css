@@ -50,14 +50,6 @@
     width: 30px;
 }
 
-.buttonRemove {
-    border: solid red 2px;
-}
-
-.buttonAdd {
-    border: solid green 2px;
-}
-
 .buttonRemove:hover,
 .clearCart:hover {
     background-color: red;
@@ -70,13 +62,15 @@
 }
 
 .clearCart {
-    border: solid red 2px;
     font-weight: 700;
     padding: 5px 10px;
 }
 
 .goBack {
     cursor: pointer;
+    color: #2727f0;
+}
+
+.goBack:hover {
     text-decoration: underline;
-    color: purple;
 }
