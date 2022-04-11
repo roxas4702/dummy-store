@@ -10,8 +10,10 @@ const Product = (props) => {
             <div className={styles.imageContainer}>
                 <img className={styles.productImage} src={props.product.image} alt="" />
             </div>
-            <span className={styles.productTitle}>{productTitle(props.product.title)}</span>
-            <span>{`$${props.product.price}`}</span>
+            <div className={styles.productInfo}>
+                <span className={styles.productTitle}>{productTitle(props.product.title)}</span>
+                <span>{`$${props.product.price}`}</span>
+            </div>
         </Link>
     );
 }

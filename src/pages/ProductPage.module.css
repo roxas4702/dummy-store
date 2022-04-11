@@ -25,6 +25,7 @@
 .productPrice {
     font-weight: 700;
     font-size: clamp(15px, 3vw, 20px);
+    margin-top: 10px;
 }
 
 .buttonsWrapper {
