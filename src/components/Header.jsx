@@ -1,4 +1,4 @@
-import styles from "./Header.module.css"
+import styles from "./Header.module.scss"
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
