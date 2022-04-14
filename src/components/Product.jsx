@@ -12,7 +12,7 @@ const Product = (props) => {
             </div>
             <div className={styles.productInfo}>
                 <span className={styles.title}>{productTitle(title)}</span>
-                <span className={styles.price}>{`$${price}`}</span>
+                <span className={styles.price}>{`$ ${price}`}</span>
             </div>
         </Link>
     );

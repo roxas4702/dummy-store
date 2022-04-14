@@ -1,49 +1,50 @@
 .product {
     display: flex;
     margin: 5%;
+    
+    img {
+        width: clamp(160px, 18vw, 300px);
+        height: auto;
+    }
+    
+    .text {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        margin-left: 60px;
+        font-size: clamp(12px, 2vw, 16px);
+    }
+    
+    .title {
+        font-weight: 700;
+        font-size: clamp(15px, 3vw, 20px);
+        margin-bottom: 15px;
+    }
+    
+    .price {
+        font-weight: 700;
+        font-size: clamp(15px, 3vw, 20px);
+        margin-top: 10px;
+    }
+    
+    .buttonsWrapper {
+        display: flex;
+    }
+    
+    .buttonsWrapper button {
+        padding: 8px 13px;
+        margin: 10px 10px 0 0;
+        border-radius: 5px;
+        background-color: #fff;
+        font-size: clamp(12px, 2vw, 16px);
+    }
+    
+    .buttonsWrapper button:hover {
+        color: #fff;
+        background-color: #292929;
+    }
 }
 
-.productImage {
-    width: clamp(160px, 18vw, 300px);
-    height: auto;
-}
-
-.productInfo {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin-left: 60px;
-    font-size: clamp(12px, 2vw, 16px);
-}
-
-.productTitle {
-    font-weight: 700;
-    font-size: clamp(15px, 3vw, 20px);
-    margin-bottom: 15px;
-}
-
-.productPrice {
-    font-weight: 700;
-    font-size: clamp(15px, 3vw, 20px);
-    margin-top: 10px;
-}
-
-.buttonsWrapper {
-    display: flex;
-}
-
-.buttonsWrapper button {
-    padding: 10px 15px;
-    margin: 10px 10px 0 0;
-    border-radius: 5px;
-    background-color: #fff;
-    font-size: clamp(12px, 2vw, 16px);
-}
-
-.buttonsWrapper button:hover {
-    color: #fff;
-    background-color: #292929;
-}
 
 @media only screen and (max-width: 580px){
     .product {
@@ -51,7 +52,7 @@
         align-items: center;
     }
 
-    .productInfo {
+    .text {
         margin: 20px
     }
 }
