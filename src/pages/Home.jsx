@@ -2,6 +2,7 @@ import styles from "./Home.module.scss"
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Product from "../components/Product";
+import { Dropdown } from 'react-bootstrap';
 
 const Home = () => {
     const [products, setProducts] = useState([]);
@@ -31,15 +32,23 @@ const Home = () => {
 
     return (
         <div>
-            <div className={styles.categoryButtons}>
-                <button onClick={getProducts}>All</button>
-                <button onClick={() => filterProducts("men's clothing")}>Men's clothing</button>
-                <button onClick={() => filterProducts("women's clothing")}>Women's clothing</button>
-                <button onClick={() => filterProducts("jewelery")}>Jewelery</button>
-                <button onClick={() => filterProducts("electronics")}>Electronics</button>
-            </div>
+            <Dropdown className={styles.dropdown}>
+                <Dropdown.Toggle className={styles.button} id="dropdown-basic">
+                    Category
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                    <Dropdown.Item onClick={getProducts}>All</Dropdown.Item>
+                    <Dropdown.Item onClick={() => filterProducts("men's clothing")}>Men's clothing</Dropdown.Item>
+                    <Dropdown.Item onClick={() => filterProducts("women's clothing")}>Women's clothing</Dropdown.Item>
+                    <Dropdown.Item onClick={() => filterProducts("jewelery")}>Jewelery</Dropdown.Item>
+                    <Dropdown.Item onClick={() => filterProducts("electronics")}>Electronics</Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
+            
             <div className={styles.productsContainer}>
                 {filteredData.map((product) => <Product product={product} key={product.id} />)}
+                <div className={styles.fillEmptySpaces}></div>
                 <div className={styles.fillEmptySpaces}></div>
                 <div className={styles.fillEmptySpaces}></div>
                 <div className={styles.fillEmptySpaces}></div>
