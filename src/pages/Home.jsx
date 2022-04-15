@@ -33,8 +33,8 @@ const Home = () => {
     return (
         <div>
             <Dropdown className={styles.dropdown}>
-                <Dropdown.Toggle className={styles.button} id="dropdown-basic">
-                    Category
+                <Dropdown.Toggle bsPrefix={styles.oldButton}>
+                    <button className={styles.customButton}>Category ⯆</button>
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>

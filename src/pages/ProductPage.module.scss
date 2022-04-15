@@ -1,6 +1,8 @@
 .product {
     display: flex;
-    margin: 5%;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 0;
     
     img {
         width: clamp(160px, 18vw, 300px);
@@ -12,6 +14,8 @@
         flex-direction: column;
         max-width: 500px;
         margin-left: 60px;
+        padding-left: 60px;
+        border-left: solid #313131 1px;
         font-size: clamp(12px, 2vw, 16px);
     }
     
@@ -50,9 +54,12 @@
     .product {
         flex-direction: column;
         align-items: center;
+        
+        .text {
+            margin: 20px;
+            padding: 0px;
+            border-left: none;
+        }
     }
 
-    .text {
-        margin: 20px
-    }
 }

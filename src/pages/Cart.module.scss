@@ -27,6 +27,16 @@
         background-color: #fff;
     }
 
+    .checkout:hover {
+        background-color: green;
+        color: white;
+    }
+
+    .clearCart:hover {
+        background-color: red;
+        color: white;
+    }
+
     @media only screen and (max-width: 1120px){       
         min-width: 90%;
         margin-top: 20px;

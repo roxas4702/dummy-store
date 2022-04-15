@@ -14,7 +14,7 @@
 
 .dropdownMenu {
     right: 0;
-    width: 400px;
+    width: clamp(260px, 40vw, 400px);
     padding: 10px 15px;
     border: solid #afafaf 1px;
     border-radius: 4px;

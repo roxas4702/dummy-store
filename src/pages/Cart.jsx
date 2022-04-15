@@ -23,7 +23,7 @@ const Cart = () => {
                 <h2>Summary</h2>
                 <span className={styles.text}>Items: {totalItems}</span>
                 <span className={styles.text}>{`Total: $ ${cartTotal.toFixed(2)}`}</span>
-                <button>Proceed to Checkout</button>
+                <button className={styles.checkout}>Proceed to Checkout</button>
                 <button className={styles.clearCart} onClick={() => emptyCart()}>Clear Cart</button>
             </div>
         </div>

@@ -50,7 +50,6 @@
     }
     
     .buttonsWrapper {
-        cursor: pointer;
         user-select: none;
         -moz-user-select: none;
         -webkit-user-select: none;
@@ -58,12 +57,23 @@
         
     }
     
-    .removeProduct {
-        color: red;
+    .removeProduct,
+    .addProduct {
+        cursor: pointer;
+        width: 15px;
+        height: 15px;
         margin-right: 15px;
+        padding: 3px;
+        border: solid #000 2px;
+        border-radius: 8px;
+        color: rgb(77, 77, 77);
+    }
+
+    .removeProduct:hover {
+        color: red;
     }
     
-    .addProduct {
+    .addProduct:hover {
         color: green;
     }
 }

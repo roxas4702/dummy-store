@@ -18,7 +18,7 @@
     }
     
     img {
-        width: 50%;
+        max-width: 50%;
         max-height: 90%;
     }
     
@@ -36,23 +36,25 @@
         font-weight: 700;
     }
     
-    @media only screen and (max-width: 449px){
-        .product {
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-            width: 95%;
-            margin: 12px 0;
+}
 
-            .imageContainer {
-                width: 180px;
-                margin-right: 20px;
-            }
-        
-            img {
-                width: 100%;
-                height: auto;
-            }
+@media only screen and (max-width: 449px){
+    .product {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 95%;
+        margin: 12px 0;
+
+        .imageContainer {
+            min-width: 150px;
+            margin-right: 20px;
+            border-bottom: 0px;
+        }
+    
+        img {
+            width: 60%;
+            height: auto;
         }
     }
 }
