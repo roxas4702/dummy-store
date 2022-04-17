@@ -24,20 +24,16 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+a, a:hover {
+    text-decoration: none;
+    color: black;
+}
+
 button {
     cursor: pointer;
     outline: none;
     border: #000 solid 2px;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-a:hover {
-    text-decoration: none;
-    color: black;
+    border-radius: 4px;
 }
 
 .content {

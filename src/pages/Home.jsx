@@ -3,6 +3,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Product from "../components/Product";
 import { Dropdown } from 'react-bootstrap';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
     const [products, setProducts] = useState([]);
@@ -34,7 +36,7 @@ const Home = () => {
         <div>
             <Dropdown className={styles.dropdown}>
                 <Dropdown.Toggle bsPrefix={styles.oldButton}>
-                    <button className={styles.customButton}>Category ⯆</button>
+                    <button className={styles.customButton}>Category <FontAwesomeIcon icon={faCaretDown} /></button>
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>

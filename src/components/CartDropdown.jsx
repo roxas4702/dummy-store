@@ -12,7 +12,7 @@ const CartDropdown = () => {
     return (
         <Dropdown align="end">
                 <Dropdown.Toggle variant="success" className={styles.cartButton} id="dropdown-basic">
-                    <FontAwesomeIcon icon={faCartShopping} /> Cart ({totalItems})
+                    <FontAwesomeIcon className={styles.cartIcon} icon={faCartShopping} />({totalItems})
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className={styles.dropdownMenu}>

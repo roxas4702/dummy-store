@@ -21,20 +21,19 @@
     button {
         max-width: 200px;
         margin-top: 20px;
-        border-radius: 6px;
-        font-size: clamp(15px, 3vw, 18px);
+        font-size: clamp(14px, 3vw, 17px);
         color: #000;
         background-color: #fff;
     }
 
     .checkout:hover {
-        background-color: green;
         color: white;
+        background-color: #1d1d1d;
     }
 
     .clearCart:hover {
-        background-color: red;
         color: white;
+        background-color: #1d1d1d;
     }
 
     @media only screen and (max-width: 1120px){       

@@ -1,14 +1,18 @@
 .cartButton {
     padding: 10px 15px;
     border: none;
-    border-radius: 6px;
-    font-size: clamp(13px, 3vw, 16px);
+    font-size: clamp(14px, 3vw, 16px);
     background-color: #25a569;
     color: #fff;
 
     &:hover,
     &:focus {
         background-color: #146C43;
+    }
+
+    .cartIcon {
+        font-size: clamp(12px, 3vw, 14px);
+        margin-right: 8px;
     }
 }
 
@@ -17,7 +21,6 @@
     width: clamp(260px, 40vw, 400px);
     padding: 10px 15px;
     border: solid #afafaf 1px;
-    border-radius: 4px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
     background-color: #fff;
 }
@@ -60,13 +63,13 @@
         display: flex;
         justify-content: center;
         padding: 8px 0;
-        border-radius: 5px;
+        border-radius: 4px;
         font-weight: 700;
-        background-color: #00ac00;
         color: #fff;
+        background-color: #25a569;
     
         &:hover {
-            background-color: #009700;
+            background-color: #146C43;
             color: #fff;
         }
     }

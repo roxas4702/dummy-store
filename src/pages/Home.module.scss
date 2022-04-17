@@ -7,7 +7,8 @@
 
 .dropdown {
     width: 110px;
-    margin: 20px auto 0 auto;
+    margin-top: 20px;
+    margin-left: 9%;
 
     a:active {
         background-color: #E9ECEF;
@@ -25,12 +26,12 @@
     }
     
     .customButton {
-        border-radius: 7px;
         width: 110px;
         background-color: white;
 
         &:hover {
-            background-color: rgb(245, 245, 245);
+            color: #fff;
+            background-color: #1d1d1d;
         }
     }
 }
