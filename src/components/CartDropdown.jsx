@@ -16,7 +16,7 @@ const CartDropdown = () => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className={styles.dropdownMenu}>
-                    {isEmpty ? <h2 className={styles.isEmpty}>Your cart is empty!</h2> : (
+                    {isEmpty ? <h2>Your cart is empty!</h2> : (
                         <div>{
                             items.map((item) => (
                                     <div className={styles.product} key={item.id}>
