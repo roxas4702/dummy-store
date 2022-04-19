@@ -39,6 +39,5 @@
 .fillEmptySpaces {
     width: clamp(180px, 18vw, 220px);
     height:0;
-    margin: clamp(20px, 4vw, 40px);
-    padding: 10px;
+    margin: 0 clamp(20px, 4vw, 40px);
 }

@@ -39,8 +39,8 @@
     .text {
         display: flex;
         flex-direction: column;
-        max-width: 90%;
-        font-size: clamp(11px, 2vw, 15px);
+        max-width: 80%;
+        font-size: clamp(13px, 2vw, 15px);
     }
     
     .price {
