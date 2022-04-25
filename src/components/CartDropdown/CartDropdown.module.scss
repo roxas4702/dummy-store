@@ -1,13 +1,14 @@
 .cartButton {
-    padding: 10px 15px;
+    padding: 5px 15px;
     border: none;
     font-size: clamp(14px, 3vw, 16px);
-    background-color: #25a569;
+    background-color: #000;
     color: #fff;
 
     &:hover,
     &:focus {
-        background-color: #146C43;
+        box-shadow: none;
+        background-color: #000;
     }
 
     .cartIcon {
@@ -17,8 +18,7 @@
 }
 
 .dropdownMenu {
-    right: 0;
-    width: clamp(260px, 40vw, 400px);
+    width: clamp(270px, 40vw, 400px);
     padding: 10px 15px;
     border: solid #afafaf 1px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
@@ -51,27 +51,19 @@
     
     .trash:hover {
         cursor: pointer;
-        color: rgb(255, 87, 87);
+        color: #ff5757;
     }
 }
 
 .goToCart {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    border-radius: 4px;
+    background-color: #000;
+    color: #fff;
+
     &:hover {
-        background-color: #fff;
-    }
-    
-    a {
-        display: flex;
-        justify-content: center;
-        padding: 8px 0;
-        border-radius: 4px;
-        font-weight: 700;
         color: #fff;
-        background-color: #25a569;
-    
-        &:hover {
-            background-color: #146C43;
-            color: #fff;
-        }
     }
 }

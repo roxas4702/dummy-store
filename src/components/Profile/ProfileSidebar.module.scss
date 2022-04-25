@@ -1,0 +1,15 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 50%;
+
+    .profilePicture {
+        border-radius: 50%;
+    }
+
+    .completeName {
+        font-weight: 700;
+    }
+}

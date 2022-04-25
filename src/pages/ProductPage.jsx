@@ -6,7 +6,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const ProductPage = ({ location }) => {
     const { state } = location;
-    const { image, title, description, price } = state.product;
+    const { image, title, description, price } = state;
     const { addItem } = useCart();
 
     return (
@@ -19,7 +19,7 @@ const ProductPage = ({ location }) => {
                     <span>{description}</span>
                     <div className={styles.priceAndButton}>
                         <span className={styles.price}>{`$ ${price}`}</span>
-                        <button onClick={() => addItem(state.product)}>Add to cart</button>
+                        <button onClick={() => addItem(state)}>Add to cart</button>
                     </div>
                 </div>
             </div>

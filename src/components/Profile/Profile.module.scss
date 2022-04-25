@@ -1,0 +1,41 @@
+.profilePage {
+    display: flex;
+    width: 50%;
+
+    .info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .locale {
+        height: 10px;
+        width: auto;
+        margin-left: 5px;
+    }
+}
+
+.isVerified {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.isVerified .tooltip {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    left: 20px;
+    padding: 2px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    background-color: rgb(53, 53, 53);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+.isVerified:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
