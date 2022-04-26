@@ -9,9 +9,7 @@ import AccountPage from "./pages/AccountPage";
 import Cart from "./pages/Cart";
 
 const App = () => {
-    const [favourites, setFavourites] = useState(null);
-	const items = { ...localStorage };
-	console.log(items["react-use-cart"])
+    const [favourites, setFavourites] = useState([]);
 
 	return (
 		<Router>

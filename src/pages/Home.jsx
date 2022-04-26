@@ -13,13 +13,22 @@ const Home = () => {
     const { favourites, setFavourites } = useContext(FavouriteContext);
 
     useEffect(() => {
-        getProducts();    
-        const check = localStorage.getItem('favourites')
-        if (check === null) localStorage.setItem('favourites', []);
-        if (favourites === null) setFavourites(JSON.parse(check))
+        const data = localStorage.getItem('favourites');
+        data && setFavourites(JSON.parse(data));
+    }, [setFavourites])
+    
+    useEffect(() => {
+        getProducts();
+        localStorage.setItem('favourites', JSON.stringify(favourites));
     }, [favourites, setFavourites])
-
-
+    
+    function toggleFavourites(id) {
+        const isFavourite = favourites.find(f => f.id === id);
+        isFavourite ? 
+        setFavourites(prev => prev.filter(f => f.id !== id)) : 
+        setFavourites([...favourites, products.find(p => p.id === id)]);
+    }
+    
     const filterProducts = (category) => {
         const updatedList = products.filter((p) => p.category === category);
         setFilteredData(updatedList);
@@ -36,14 +45,6 @@ const Home = () => {
             setProducts(res.data);
             setFilteredData(res.data);
         }
-    }
-
-    function toggleFavourites(id) {
-        const isFavourite = favourites.find(f => f.id === id);
-        isFavourite ? 
-        setFavourites(prev => prev.filter(f => f.id !== id)) : 
-        setFavourites([...favourites, products.find(p => p.id === id)]);
-
     }
 
     return (

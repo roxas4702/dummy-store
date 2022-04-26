@@ -5,8 +5,17 @@ import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const Profile = () => {
     const { isLoading, user, logout } = useAuth0();
+    
+    function logoutFunc() {
+        const items = { ...localStorage };
+        localStorage.setItem(user.sub, JSON.stringify(items))
+        localStorage.removeItem('react-use-cart');
+        localStorage.removeItem('favourites');
+        logout();
+    }
+    
     if (isLoading) return null;
-
+    
     return (
         <div className={styles.profilePage}>
             <ul className={styles.info}>
@@ -28,7 +37,7 @@ const Profile = () => {
                             <span className={styles.tooltip}>{user.email_verified ? 'Verified' : 'Not Verified'}</span>
                         </span>
                 </li>
-                <li><button className={styles.logout} onClick={() => logout()}>Log Out</button></li>
+                <li><button className={styles.logout} onClick={() => logoutFunc()}>Log Out</button></li>
             </ul>
         </div>
     );

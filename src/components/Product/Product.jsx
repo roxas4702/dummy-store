@@ -6,14 +6,13 @@ import { Link } from "react-router-dom";
 
 const Product = (props) => {
     const { id, image, title, price } = props.product;
-    const productTitle = (title) => title.length < 60 ? title : `${title.substring(0, 60)}...`;
-    localStorage.setItem('favourites', JSON.stringify(props.favourites));
+    const productTitle = (title) => title.length < 60 ? title : `${title.substring(0, 60)}...`; 
 
     return (
         <div className={`${styles.product} ${props.vertical && styles.vertical}`}>
             <div className={styles.imageContainer}>
                 <FontAwesomeIcon 
-                    onClick={() => props.toggleFavourites(id)} 
+                    onClick={() => props.toggleFavourites(id)}
                     className={styles.bookmarkIcon} 
                     icon={props.favourites.find(f => f.id === id) ? bookmarkSolid : bookmarkRegular} 
                 />
