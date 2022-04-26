@@ -1,15 +1,25 @@
 .sidebar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: fixed;
     height: 100vh;
-    width: 50%;
+    left: 0;
+    width: 150px;
+    padding: 15px;
 
     .profilePicture {
         border-radius: 50%;
+        margin-bottom: 10px;
     }
 
     .completeName {
         font-weight: 700;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+        margin-bottom: 5px;
     }
 }

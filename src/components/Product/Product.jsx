@@ -10,7 +10,7 @@ const Product = (props) => {
     localStorage.setItem('favourites', JSON.stringify(props.favourites));
 
     return (
-        <div className={styles.product}>
+        <div className={`${styles.product} ${props.vertical && styles.vertical}`}>
             <div className={styles.imageContainer}>
                 <FontAwesomeIcon 
                     onClick={() => props.toggleFavourites(id)} 
@@ -21,8 +21,10 @@ const Product = (props) => {
             </div>
             <div className={styles.text}>
                 <span className={styles.title}>{productTitle(title)}</span>
-                <span className={styles.price}>{`$ ${price}`}</span>
-                <Link className={styles.buyButton} to={{ pathname:`/product/${id}`, state: props.product }}>Buy Now</Link>
+                <div className={styles.priceAndButton}>
+                    <span className={styles.price}>{`$ ${price}`}</span>
+                    <Link to={{ pathname:`/product/${id}`, state: props.product }}><button className={styles.buyButton}>Buy Now</button></Link>
+                </div>
             </div>
         </div>
     );

@@ -1,6 +1,7 @@
 import styles from "./Home.module.scss"
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { FavouriteContext } from "../contexts/FavouriteContext";
 import Product from "../components/Product/Product";
 import { Dropdown } from 'react-bootstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,15 +10,14 @@ import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 const Home = () => {
     const [products, setProducts] = useState([]);
     const [filteredData, setFilteredData] = useState([]);
-    const [favourites, setFavourites] = useState(null)
-
+    const { favourites, setFavourites } = useContext(FavouriteContext);
 
     useEffect(() => {
         getProducts();    
         const check = localStorage.getItem('favourites')
         if (check === null) localStorage.setItem('favourites', []);
         if (favourites === null) setFavourites(JSON.parse(check))
-    }, [favourites])
+    }, [favourites, setFavourites])
 
 
     const filterProducts = (category) => {
@@ -63,7 +63,7 @@ const Home = () => {
             </Dropdown>
             
             <div className={styles.productsContainer}>
-                {filteredData.map((product) => <Product product={product} key={product.id} toggleFavourites={toggleFavourites} favourites={favourites} />)}
+                {filteredData.map(product => <Product product={product} key={product.id} toggleFavourites={toggleFavourites} favourites={favourites} />)}
                 <div className={styles.fillEmptySpaces}></div>
                 <div className={styles.fillEmptySpaces}></div>
                 <div className={styles.fillEmptySpaces}></div>

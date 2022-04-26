@@ -1,10 +1,15 @@
 .profilePage {
     display: flex;
-    width: 50%;
+    min-width: 50vw;
 
     .info {
         display: flex;
         flex-direction: column;
+
+        li {
+            list-style: none;
+            margin-bottom: 15px;
+        }
     }
 
     .locale {
@@ -38,4 +43,11 @@
 .isVerified:hover .tooltip {
     visibility: visible;
     opacity: 1;
+}
+
+.logout {
+    padding: 4px 15px;
+    border: none;
+    background-color: #000;
+    color: #fff;
 }

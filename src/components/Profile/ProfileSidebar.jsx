@@ -4,12 +4,12 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const ProfileSidebar = () => {
     const { isLoading, user} = useAuth0();
-    if (isLoading) return null
+    if (isLoading) return null;
 
     return (
         <div className={styles.sidebar}>
-            <img className={styles.profilePicture} src={user.picture} alt="img" />
-            <span className={styles.completeName}>{user.name}</span>
+            <img className={styles.profilePicture} src={user.picture} alt="img failed to load" />
+            <h5 className={styles.completeName}>{user.name}</h5>
             <ul>
                 <li><Link to='/profile'>Profile</Link></li>
                 <li><Link to='/profile/favourites'>Favourites</Link></li>

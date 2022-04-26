@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 
 const ProfileButton = () => {
     const { isLoading, isAuthenticated, user, loginWithRedirect } = useAuth0();
-    
     if (isLoading) return null
-    console.log(user)
+    //console.log(user)
+    
     return (
         <div className={styles.profileButton}>
             {isAuthenticated ? (

@@ -33,10 +33,21 @@
         margin-bottom: 7px;
     }
 
+    .priceAndButton {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 12  px;
+    }
+
     .price {
         font-weight: 700;
     }
     
+    .buyButton {
+        padding: 0 10px;
+        background-color: #000;
+        color: #fff;
+    }
 }
 
 .bookmarkIcon {
@@ -67,6 +78,32 @@
         img {
             width: 60%;
             height: auto;
+        }
+
+        .bookmarkIcon {
+            left: 8px;
+        }
+    }
+
+    .vertical {
+        display: flex;
+        flex-direction: column;
+        width: clamp(180px, 18vw, 220px);
+        margin: clamp(20px, 4vw, 40px);
+
+        .imageContainer {
+            width: 100%;
+            margin-right: 0;
+            border-bottom: solid #afafaf 1px;
+        }
+    
+        img {
+            width: 50%;
+            max-height: 90%;
+        }
+
+        .bookmarkIcon {
+            left: 90%;
         }
     }
 }

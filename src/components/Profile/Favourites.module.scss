@@ -1,3 +1,14 @@
 .favourites {
-    width: 50%;
+    min-width: 50vw;
+
+    h2 {
+        text-align: center;
+    }
+    
+    .productsContainer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
 }
