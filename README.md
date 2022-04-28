@@ -8,7 +8,8 @@ I made a simple fake e-commerce to train my web developing skills. The app uses 
 * HTML, Sass, JS
 * Bootstrap (for dropdowns)
 * React
-* [Fake Store API](https://fakestoreapi.com/) (to get the products)
+* [Auth0](https://auth0.com/) (authentication)
+* [Fake Store API](https://fakestoreapi.com/) (dummy articles)
 * [react-use-cart hook](https://www.npmjs.com/package/react-use-cart) (to manage shopping cart)
 * React Router (v5)
 * Axios
