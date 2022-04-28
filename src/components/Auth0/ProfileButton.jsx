@@ -7,20 +7,16 @@ import { Link } from "react-router-dom";
 const ProfileButton = () => {
     const { isLoading, isAuthenticated, user, loginWithRedirect } = useAuth0();
     
-    function loginFunc() {
-        loginWithRedirect();
-    }
-    
     if (isLoading) return null;
 
     return (
         <div className={styles.profileButton}>
             {isAuthenticated ? (
             <Link to='/profile'>
-                <span>Hello, {user.given_name}!</span>            
+                <span>Hello, {user.given_name || user.email}!</span>            
             </Link>
             ) : (
-                <button onClick={() => loginFunc()}>
+                <button onClick={() => loginWithRedirect()}>
                     <FontAwesomeIcon icon={faUser} />Log In
                 </button>
             )}

@@ -1,10 +1,14 @@
 import styles from "./Favourites.module.scss"
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { FavouriteContext } from "../../contexts/FavouriteContext";
 import Product from "../Product/Product";
 
 const Favourites = () => {
     const { favourites, setFavourites } = useContext(FavouriteContext);
+
+    useEffect(() => {
+        localStorage.setItem('favourites', JSON.stringify(favourites));
+    }, [favourites])
 
     function toggleFavourites(id) {
         const isFavourite = favourites.find(f => f.id === id);

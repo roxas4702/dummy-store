@@ -19,8 +19,7 @@ const Home = () => {
     
     useEffect(() => {
         getProducts();
-        localStorage.setItem('favourites', JSON.stringify(favourites));
-    }, [favourites, setFavourites])
+    }, [])
     
     function toggleFavourites(id) {
         const isFavourite = favourites.find(f => f.id === id);

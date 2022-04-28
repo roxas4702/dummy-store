@@ -7,10 +7,12 @@ const Profile = () => {
     const { isLoading, user, logout } = useAuth0();
     
     function logoutFunc() {
-        const items = { ...localStorage };
-        localStorage.setItem(user.sub, JSON.stringify(items))
-        localStorage.removeItem('react-use-cart');
+        const saveFavoutites = localStorage.getItem('favourites')
+        const saveCart = localStorage.getItem('react-use-cart')
+        localStorage.setItem(`${user.sub}_favourites`, saveFavoutites)
+        localStorage.setItem(`${user.sub}_cart`, saveCart)
         localStorage.removeItem('favourites');
+        localStorage.removeItem('react-use-cart');
         logout();
     }
     
@@ -26,7 +28,7 @@ const Profile = () => {
                     <span>Country: </span>        
                     <img 
                         className={styles.locale}
-                        src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${user.locale.toUpperCase()}.svg`} 
+                        src={user.locale ? `https://purecatamphetamine.github.io/country-flag-icons/3x2/${user.locale.toUpperCase()}.svg` : null} 
                         alt={user.locale} 
                     />
                 </li>
