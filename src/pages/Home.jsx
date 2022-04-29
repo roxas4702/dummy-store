@@ -1,6 +1,8 @@
 import styles from "./Home.module.scss"
 import axios from "axios";
 import { useState, useEffect, useContext } from "react";
+import { useAuth0 } from "@auth0/auth0-react";
+import { useCart } from "react-use-cart";
 import { FavouriteContext } from "../contexts/FavouriteContext";
 import Product from "../components/Product/Product";
 import { Dropdown } from 'react-bootstrap';
@@ -11,6 +13,28 @@ const Home = () => {
     const [products, setProducts] = useState([]);
     const [filteredData, setFilteredData] = useState([]);
     const { favourites, setFavourites } = useContext(FavouriteContext);
+	const { isAuthenticated, user } = useAuth0();
+    const { setItems } = useCart();
+    
+    useEffect(() => {
+        isAuthenticated && getUserData();
+
+        function getUserData() {
+            const getFavourites = localStorage.getItem(`${user.sub}_favourites`);
+            if (getFavourites) {
+                localStorage.setItem('favourites', getFavourites);
+                setFavourites(JSON.parse(getFavourites));
+            }
+            const getCart = localStorage.getItem(`${user.sub}_cart`);
+            if (getCart) {
+                localStorage.setItem('react-use-cart', getCart);
+                const parsedCart = JSON.parse(getCart)
+                setItems(parsedCart.items);
+            }
+            localStorage.removeItem(`${user.sub}_favourites`);
+            localStorage.removeItem(`${user.sub}_cart`);
+        }
+    }, [isAuthenticated, user?.sub, setFavourites, setItems])
 
     useEffect(() => {
         const data = localStorage.getItem('favourites');
@@ -20,6 +44,7 @@ const Home = () => {
     useEffect(() => {
         getProducts();
     }, [])
+
     
     function toggleFavourites(id) {
         const isFavourite = favourites.find(f => f.id === id);
